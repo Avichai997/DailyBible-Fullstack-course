@@ -1,0 +1,50 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "restoreTerminals.keepExistingTerminalsOpen": false,
+    "restoreTerminals.terminals": [
+      {
+        "splitTerminals": [
+          {
+            "name": "Server",
+            "commands": [
+              "cd server",
+              "npm set legacy-peer-deps true",
+              "npm i",
+              "npm run huskyInit",
+              "npm run start:dev"
+            ]
+          },
+          {
+            "name": "Client",
+            "commands": ["cd client", "npm i", "npm run huskyInit", "npm run start:dev"]
+          }
+        ]
+      }
+    ],
+    "typescript.tsdk": "client/node_modules/typescript/lib",
+    "eslint.workingDirectories": [
+      {
+        "mode": "auto"
+      }
+    ],
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "files.autoSave": "afterDelay",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnPaste": true,
+    "editor.mouseWheelZoom": true,
+    "prettier.printWidth": 100,
+    "eslint.enable": true,
+    "eslint.validate": ["typescript", "javascript", "html"],
+    "editor.formatOnType": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "typescript.referencesCodeLens.enabled": true,
+    "javascript.referencesCodeLens.showOnAllFunctions": true,
+    "typescript.referencesCodeLens.showOnAllFunctions": true
+  }
+}
